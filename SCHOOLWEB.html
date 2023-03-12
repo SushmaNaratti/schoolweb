@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+            <title>School WebSite</title>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+            <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
+            <!--<link rel="stylesheet" href="style.css"> not required-->
+        <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family:'Poppins',sans-serif;
+            background-color:white;
+        }
+        nav{
+            display:flex;
+            flex-direction:row;
+            justify-content:space-between;
+            align-items:center;
+            padding: 1vw 8vw;
+            box-shadow:2px 2px 10px rgb(0,0,0,0.15);
+        }
+        nav img{
+            width:150px;
+            cursor:pointer;
+        }
+        nav .navigation ul{
+            display:flex;
+            justify-content:flex-end;
+            align-items: center;
+        }
+        nav .navigation ul li{
+            list-style:none;
+            margin-left:30px;
+        }
+        nav .navigation ul li a{
+            text-decoration:none;
+            color:rgb(21,21,100);
+            font-size:20px;
+            font-weight:500;
+            transition:0.3s ease;
+        }
+        nav .navigation ul li a:hover{
+            color:blue;
+        }
+        .heading{
+            margin: auto;
+            text-align: center;
+            padding-top: 1%;
+            padding-bottom: 1%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active {
+  background-color: #717171;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}   
+.time{
+  margin:auto;
+  text-align: center;
+  background-color:rgb(255,170,0);
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+.vision{
+	margin:auto;
+	background-color:rgb(79, 153, 250);
+	padding:3% ;
+	color:white;
+}
+.vision p{
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+}
+.AboutUs{
+	margin:auto;
+  text-align: center;
+	padding:3% ;
+
+}
+table,th,td{
+	margin:auto;
+	border:double;
+	text-align:center;
+	background-color:azure;
+}
+.AboutUs table{
+  width: 50%;
+  height: auto;
+}
+td{
+  font-size: 18px;
+}
+footer {
+  display: flex;
+  background-color: #717171;
+  justify-content: flex-end;
+  padding: 20px;
+}
+.scrollToTopBtn {
+  background-color: black;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 48px;
+  width: 48px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.5s ease;
+}
+
+.showBtn {
+  opacity: 1;
+  transform: translateY(0);
+}
+.contactImage{
+  width: 30%;
+  margin-left:auto;
+  margin-right:auto;
+  display: block;
+}
+.leftcolumn{
+  margin-left: 10%;
+  width:30%;
+  text-align:center;
+  float: left;
+}
+.address{
+  width: 50%;
+  float: none;
+  margin: auto;
+  padding-top: 10px;
+  text-align: center;
+}
+.rightcolumn{
+  margin-right: 10%;
+  width: 30%;
+  text-align: center;
+  float: right;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn, .center {   
+    width: 100%;
+    padding: 0;
+  }
+}
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navigation a {
+    float: none;
+    width: 100%;
+  }
+}
+h2{
+	text-align:center;
+}
+.obj{
+  text-align: justify;
+  margin-top: 30px;
+  padding-right:15%;
+  padding-left: 15%;
+  font-size: 20px;
+  background-color: white;
+}
+.AboutUs img{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 90%;
+}
+p{
+  font-size: 20px;
+  padding-right:15%;
+  padding-left: 15%;
+  text-align: justify;
+}
+div.gallery img {
+  width: 100%;
+  height: 90%;
+}
+div.gallery1 img {
+  width: 125%;
+  height: auto;
+}
+
+.responsive {
+  padding: 0 6%;
+  float: left;
+  width:50%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#gallery img{
+  width: 50%; 
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.achievepic1 img {
+  width: 130%;
+  height: auto;
+}
+.achievepic img {
+  width: 100%;
+  height: 75%;
+  
+}
+
+    </style>
+    </head>
+    <body>
+        <header>
+            <marquee behavior="scroll" direction="left" style="font-family:'Poppins' ,sans-serif;font-size:24px;color:black;">
+            Admissions open at Govt. Kannada Higher Primary School No. 26,Belagavi for 1st std to 8th std.For more information, refer 'Admission' section and 'Contact us' section for contact information.
+            </marquee>
+        </header>
+        <nav>
+            <img src="https://user-images.githubusercontent.com/116060026/222919887-574062d3-edc7-40c3-b483-f39c34d84187.jpeg" width="180px" height="100px" alt="School-WebSite">
+                <div class="navigation">
+                     <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a  href="#facilities">Facilities</a></li>
+                        <li ><a href="#achievements">Achievements</a></li>
+                        <li ><a  href="#admission">Admission</a></li>
+                        <li ><a  href="#gallery">Gallery</a></li>
+                        <li ><a  href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+        </nav>
+            <div class="heading">
+            <h1 >Govt. Kannada Higher Primary School No. 26<br></h1>
+            <h3>Vishweshwaraya Nagar, Sadashiv Nagar, Belagavi, Karnataka - 590019</h3> 
+            </div>
+<section id="home">
+	<div class="Home">
+    <div class="slideshow-container">
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 7</div>
+      <img src="https://user-images.githubusercontent.com/116060026/222919900-3496170f-32da-4117-973c-16813db8d172.jpeg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 7</div>
+      <img src="https://user-images.githubusercontent.com/116060026/222919912-1d808796-54a7-4b0a-b434-6cb90a41698d.jpeg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 7</div>
+      <img src="https://user-images.githubusercontent.com/116060026/222919916-bb14c141-e49c-4f1d-8f51-adb1c75b1b4d.jpeg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 7</div>
+        <img src="https://user-images.githubusercontent.com/116060026/222919922-b4c9a009-f03a-45d0-a62c-892726fcfe21.jpeg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 7</div>
+        <img src="https://user-images.githubusercontent.com/116060026/224293097-d7e215ee-af75-4721-a355-dfb1725a995c.jpeg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">6 / 7</div>
+        <img src="https://user-images.githubusercontent.com/116060026/224293152-b6927f88-d745-4977-8222-e6d6000bc6fa.jpeg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">7 / 7</div>
+        <img src="https://user-images.githubusercontent.com/116060026/224293066-41b620ad-fed8-4556-82e5-8d7efc3d4f85.jpeg" style="width:100%">
+      </div>
+      
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div> 
+    <div class="time">
+        <h2>SCHOOL TIMINGS : 10:00 AM to 04:45 PM</h2>
+    </div>
+	<div class="vision" style="text-align: center">
+					<h2 style="color:white">VISION</h2><br>
+					<h3>All round development of the Students<br>
+					ಮಕ್ಕಳ ಸರ್ವಾಂಗೀಣ ಅಭಿವೃದ್ಧಿ</h3>
+  </div>
+  <div class="obj">
+    <h2>OBJECTIVES</h2><br>
+		<ul>
+      <li>The school aims to provide quality and value based education to the children of rural areas and lower economic class people.</li>
+      <li>The stand-out feature of this school is the inculation of culture and values in the personality of students and make them better citizens.</li>
+      <li>Apart from education, the school also promotes the overall development of the children in several other fields like Sports(Kabaddi,Volleyball)etc.</li>
+    </ul>
+    </div>
+	</div>
+	</section>
+</section>
+<section id="about">
+    <div class="AboutUs">
+		<h2>ABOUT</h2><br>
+		<img src="https://user-images.githubusercontent.com/116060026/222920145-d28f1ce8-c78d-4baf-891c-3581ab4aea61.jpeg" alt="school">
+			<br>
+			<p><b style="font-size:20px;">G</b>overnment Kannada Higher Primary School No.26,Belagavi,was founded in 1980.<br><br>
+        Our school provides education for students from 1st std to 8th std.It has both Kannada as well as English medium, which helps
+        the students to understand the concepts easily in their mother tongue as well as develops their listening,reading and writing skills in English.<br>
+       <br>Everyday, the school begins with daily assembly, consisting of prayer after which the regular
+        classes begin.During games period,the students can play a variety of  indoor as well as outdoor sports.<br>
+        <br>The Number of faculties in the Teaching department are 10.The current Head Mistress is<b> Mrs. R.N Belgaonkar.</b>
+        The total number of students for the current academic year 2022-23 sums up to 316.<br>The detailed analysis is given below:
+		<h3 style="color:white">The Number of students per class</h3>
+		<br></br>
+		<table>
+			<tr style="font-size: 20px">
+				<th>Standard</th>
+				<th>No. of Boys</th>
+				<th>No. of Girls</th>
+				<th>Total</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>22</td>
+				<td>22</td>
+				<td>44</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>18</td>
+				<td>24</td>
+				<td>42</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>15</td>
+				<td>9</td>
+				<td>24</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>15</td>
+				<td>23</td>
+				<td>38</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>19</td>
+				<td>21</td>
+				<td>40</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>18</td>
+				<td>33</td>
+				<td>51</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>19</td>
+				<td>19</td>
+				<td>38</td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td>25</td>
+				<td>14</td>
+				<td>39</td>
+			</tr>
+			<tr style="font-size: 20px" >
+			<th>Total</th>
+      <th>151</th>
+      <th>165</th>
+      <th>316</th>
+			</tr>
+		</table>
+    </div>
+</section>
+
+<section id="facilities">
+  <h2>FACILITIES</h2><br><br>
+  <div class="responsive">
+    <div class="gallery1">
+        <img src="https://user-images.githubusercontent.com/116060026/224292993-b918d8e2-576a-41a2-b370-2840c4496a7d.jpeg" alt="playground">
+    </div>
+  </div>
+  
+  <div class="responsive">
+    <div class="gallery">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQb2UK-JmiK7564Q4hCpWw6r_NEyYtLU2VoZQ&usqp=CAU" alt="playground">
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div style="padding-top:3%">
+    <p>Our school consists of a huge playground with both indoor and outdoor sports facilities such as
+      <b>volleyball court,dumbell set,carrom board,sevenstones(lagori).</b>
+      </p><br>
+  </div>
+  <br><p><b>Library</b> is available which consists of several academic as well as recreational books
+     for the students.</p><br>
+  <br><p>Our school provides<br>1. free books,<br>2. shoes and <br>3. food like milk,eggs etc.</p><br>
+  <br><p>Additionally,<b>Mid-day meals</b> are also provided to the students by the NGO,SAMRUDHI SERVICE SOCIETY,Belagavi.</p>
+</section>
+
+<section id="achievements">
+    <div class="achieve">
+      <h2>ACHIEVEMENTS</h2><br>
+      <div style="color:coral;text-align: center;font-size: 17px;border-style: dotted">ACADEMICS</div><br>
+      <p>Our school is extremely proud of the outstanding results obtained by the students of all classes
+        of the academic year 2021-22 as the meticulous work of students,Head Mistress and staff has paid off.</p><br>
+      <p style="padding-left: 25%">The students proceeded with their victorious streak with 100% results.</b><br>
+      The detailed analysis of the students' results is given below:</p>
+    </div>
+      <br><h3 style="text-align: center">Total Number of students appeared and passed in Final Exam class-wise</h3><br><br>
+      <table>
+        <tr style="font-size: 20px">
+          <th>Class</th>
+          <th>No of boys appeared</th>
+          <th>No of girls appeared</th>
+          <th>Total students appeared</th>
+          <th>Total students passed</th>
+        </tr>
+      <tr>
+        <td>1</td>
+        <td>24</td>
+        <td>28</td>
+        <td>52</td>
+        <td>52</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>12</td>
+        <td>08</td>
+        <td>20</td>
+        <td>20</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>09</td>
+        <td>15</td>
+        <td>24</td>
+        <td>24</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>10</td>
+        <td>11</td>
+        <td>21</td>
+        <td>21</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>12</td>
+        <td>14</td>
+        <td>26</td>
+        <td>26</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>20</td>
+        <td>14</td>
+        <td>34</td>
+        <td>34</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>21</td>
+        <td>09</td>
+        <td>30</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>26</td>
+        <td>29</td>
+        <td>55</td>
+        <td>55</td>
+      </tr>
+      <tr style="font-size: 20px">
+        <th>Total</th>
+        <th>134</th>
+        <th>128</th>
+        <th>262</th>
+        <th>262</th>
+      </tr>
+      </table><br>
+      <div style="color:coral;text-align: center;font-size: 17px;border-style: dotted">SPORTS</div><br>
+      <H4 style="text-align: center;padding-right:15%;padding-left: 15%;">BOYS OF OUR SCHOOL GOT SELECTED AND WON AT THE <mark>TALUKA LEVEL KABBADDI COMPETITION.</mark><br><br>
+      ALSO, IN THE<mark> STATE LEVEL WRESTLING COMPETITION</mark> OUR BOYS BROUGHT GLORY TO OUR SCHOOL BY WINNING IT.</H4><br><br>
+      <div style="color:coral;text-align: center;font-size: 17px;border-style: dotted">COMPETITIONS</div><br>
+      <div class="responsive">
+        <div class="achievepic1">
+            <img src="https://user-images.githubusercontent.com/116060026/224293879-be8554da-226e-4fb1-a05c-79dbff729178.jpeg">
+        </div>
+      </div>
+      
+      <div class="responsive">
+        <div class="achievepic">
+            <img src="https://user-images.githubusercontent.com/116060026/224293857-9591d475-bab1-49f1-aee6-0a256ac1be9d.jpeg">
+        </div>
+      </div>
+      <div class="clearfix"></div><br><br>
+      <H3 style="text-align: center;padding-right:15%;padding-left: 15%;">Our school students secured <mark>FIRST PLACE</mark>in  'VAAKOVAAKYAM'
+      ,a Science quiz competition conducted by Agastya Foundation.</H3><br>
+      <div style="color:coral;text-align: center;font-size: 17px;border-style: dotted">COMPETITIVE EXAMS</div><br>
+      <H3 style="text-align: center;padding-right:15%;padding-left: 15%;">Three students of Eighth std wrote and passed the NMMS exam.</H3><br>
+      <p style="text-align: center"><em>ABOUT NMMS(National Means Cum-Merit Scholarship) EXAM:</em><br>
+        NMMS is a National level competitive scholarship examination scheme for 8th standard students who
+        are studying in Government and Government-aided schools.Grants scholarship of INR 1000 per month
+        for 4 years from class IX to XII. Students will develop the competitive skills to face the competitive and 
+        government exams with confidence.
+        <br><br>
+        To know more about NMMS,<a href="https://www.youthforseva.org/resources/Youth%20For%20Seva/Resources/Education/Documents/NMMS/NMMS%20Brochure%20-%20Website.pdf" target="_blank">CLICK HERE</a></p>
+</section><br>
+<section id="admission" style="background-color: #f2f2f2">
+  <h2>ADMISSIONS</h2><br>
+  <p>For the admission of students between 1st std to 8th std, the following documents are required:<br>
+    <ol style="padding-left: 15%;padding-right: 15%;font-size: 20px">
+      <li>Original Birth Certificate of the child</li>
+      <li>Aadhar Card of the child</li>
+      <li>Aadhar Card of both the parents</li>
+      <li>Caste certificate of father</li>
+      <li>Duly filled Admission application form</li>
+      <li>Other documents,as required</li>
+    </ol><br></p>
+    <div class="row">
+      <div class="address">
+    <div class="card">
+      <h3 class="card-title">ACADEMIC FEES</h3>
+      <p class="card-body" style="text-align: center">NIL</p>
+    </div>
+    </div>
+  </div><br>
+    <p style="text-align: center">For further information,please refer 'contact us' section to contact us.</p>
+</section><br><br>
+
+<section id="gallery">
+  <h2>GALLERY</h2>
+  <img src="https://user-images.githubusercontent.com/116060026/224293685-52f081f8-7895-4af2-84da-ad2a732ccc7b.jpeg">
+  <img src="https://user-images.githubusercontent.com/116060026/224293764-21792cc3-b83f-4e82-a00f-e8ba3ca44e7b.jpeg" style="padding-top: 5%">
+  <img src="https://user-images.githubusercontent.com/116060026/224490759-adfef480-7fa6-4ab0-a558-81fbb84cb68c.jpeg" style="padding-top: 5%">
+  <img src="https://user-images.githubusercontent.com/116060026/224293830-13d3ba72-1539-40d6-bb8d-772a3ce3e2b3.jpeg" style="padding-top: 5%">
+</section>
+<section id="contact" style="background-color: #f2f2f2">
+      <div class="contactUs">
+      <img src="https://media.istockphoto.com/id/1365543480/video/contact-us-concept.jpg?s=640x640&k=20&c=G16GzQ4uJKlITww2ArmKNB9UKb1-IT2eyJrUxkUmAIY=" class="contactImage" alt="contact us">
+      </div>
+      <div class="row">
+        <div class="leftcolumn">
+          <div class="card">
+            <h3 class="card-title">EMAIL</h3>
+            <p class="card-body" style="text-align: center">wajantrib@gmail.com</p>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <h3 class="card-title">PHONE NUMBERS</h3>
+          <p class="card-body" style="text-align: center">+91 9986746098
+            <br>+91 9845117932</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="address">
+        <div class="card">
+        <h3 class="card-title">ADDRESS</h3>
+          <address class="card-body">Govt. Kannada Higher Primary School No. 26<br>
+  Vishweshwaraya Nagar, Sadashiv Nagar, Belagavi, Karnataka - 590019</address>
+</div>
+</div>
+<div style="margin-top: 5%">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1501.5162020342977!2d74.50642094574552!3d15.874287372583137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf61534dab4a75%3A0x95b1374f070fa1ff!2sNo%2026%20Vishweshwaraya%20School!5e0!3m2!1sen!2sin!4v1677325209397!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</section>
+<button class="scrollToTopBtn">^</button> 
+<footer></footer>
+
+
+
+<script>
+let slideIndex = 0;
+showSlides();
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000); // Change image every 5 seconds
+}
+    // We select the element we want to target
+    var target = document.querySelector("footer");
+
+var scrollToTopBtn = document.querySelector(".scrollToTopBtn");
+var rootElement = document.documentElement;
+
+// Next we want to create a function that will be called when that element is intersected
+function callback(entries, observer) {
+  // The callback will return an array of entries, even if you are only observing a single item
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      // Show button
+      scrollToTopBtn.classList.add("showBtn");
+    } else {
+      // Hide button
+      scrollToTopBtn.classList.remove("showBtn");
+    }
+  });
+}
+
+function scrollToTop() {
+  rootElement.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+scrollToTopBtn.addEventListener("click", scrollToTop);
+
+// Next we instantiate the observer with the function we created above. This takes an optional configuration
+// object that we will use in the other examples.
+let observer = new IntersectionObserver(callback);
+// Finally start observing the target element
+observer.observe(target);
+      </script>      
+     </body>
+</html>
